@@ -14,7 +14,7 @@ window.addEventListener('scroll', function() {
     // 상단바에 해당하는 요소 선택
     const navbar = document.querySelector('.wrap1');
   
-    // 상단바가 있는 경우에만 실행
+    // 상단바가 있는 경우에 실행
     if (navbar) {
       // 일정 스크롤 높이 이하에서만 상단바 위치 조정
       if (scrollHeight < 10) {
