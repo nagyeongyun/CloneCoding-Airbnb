@@ -8,25 +8,26 @@ function onMenulist(){
 }
 
 window.addEventListener('scroll', function() {
-    // 스크롤 높이 계산
-    const scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
+  const navbar = document.querySelector('.wrap1');
+  const navbarHeight = navbar.offsetHeight; //상단바 높이
+  let lastScroll = 0;
   
-    // 상단바에 해당하는 요소 선택
-    const navbar = document.querySelector('.wrap1');
-  
-    // 상단바가 있는 경우에 실행
-    if (navbar) {
-      // 일정 스크롤 높이 이하에서만 상단바 위치 조정
-      if (scrollHeight < 10) {
-        // 스크롤 높이에 따라 변화하는 값을 계산
-        const transformValue = 'translateY(' + (-scrollHeight) + 'px)';
-        // transform 속성 적용
-        navbar.style.transform = transformValue;
-      }
-      // 일정 스크롤 높이 이상에서는 상단바 고정
-      else {
-        // transform 속성 적용
-        navbar.style.transform = 'translateY(-10px)';
-      }
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    const a = 25-currentScroll;
+    const b = 25-navbarHeight
+    
+    if (currentScroll <= navbarHeight) {
+      navbar.style.paddingTop = a + `px`;  //상단바 높이 - 현재 스크롤 위치
+      navbar.style.boxShadow = 'none';
+    } else if (currentScroll > lastScroll) {
+      navbar.style.paddingTop = '30';
+      navbar.style.boxShadow = '0 2px 2px rgba(212, 212, 212, 0.5)';
+    } else {
+      navbar.style.paddingTop = b + `px`; //상단바 높이 - navbarHeight
+      navbar.style.boxShadow = '0 2px 2px rgba(212, 212, 212, 0.5)';
     }
+  
+    lastScroll = currentScroll;
+  });
   });

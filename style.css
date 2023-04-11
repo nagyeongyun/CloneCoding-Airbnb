@@ -4,7 +4,7 @@
 header{
     position: fixed;
     width: 100%;
-
+    background-color: white;
 }
 .wrap0{
     border-bottom: 1px solid #ddddddb7;
@@ -114,17 +114,19 @@ header{
     padding: 8px 0px 8px 0px;
 }
 .wrap1{
-    height: 90px;
+    height: 63px;
     background-color: white;
     transition: transform 0.2s ease-out;
+    padding-top: 25px;
+    margin-top: 10px;
 }
 .container2{
     display: flex;
     justify-content: center;
-    margin: 0px 90px 25px 90px;
+    margin: 0px 90px 0px 90px;
 }
 .imgtxt img{
-    padding: 30px 30px 9px 30px;
+    padding: 0px 30px 9px 30px;
     width: 24px;
     height: 24px;
 }
@@ -150,7 +152,7 @@ header{
     width: 30px;
     height: 30px;
     font-weight: bold;
-    margin: 20px 0px 0px -10px;
+    margin: 0px 0px 0px -10px;
 }
 .filterbtn{
     display: flex;
@@ -162,7 +164,7 @@ header{
     border: 1px solid #dddddd;
     width: 75px;
     height: 45px;
-    margin: 20px 0px 0px 15px ;
+    margin: 0px 0px 0px 15px ;
 }
 .filterbtn img{
     width: 20px;
